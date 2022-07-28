@@ -9,9 +9,9 @@ dbset db mssqls
 dbset bm TPC-C
 
 diset connection mssqls_host localhost
-diset connection mssqls_authentication windows
-#How to specify the ODBC driver here, it has spaces, in double quotes?
+diset connection mssqls_authentication linux
 diset connection mssqls_odbc_driver "ODBC Driver 17 for SQL Server"
+diset connection mssqls_linux_odbc "/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.10.so.1.1"
 
 diset tpcc mssqls_user root
 diset tpcc mssqls_pass mssqls
