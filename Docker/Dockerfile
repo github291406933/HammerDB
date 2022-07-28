@@ -69,6 +69,9 @@ WORKDIR /home/hammerdb/HammerDB-4.4
 
 # Adding some sample scripts to be used with HammerDB command line interface
 ADD sample_scripts /home/hammerdb/HammerDB-4.4/sample_scripts
+# support tls1.0
+RUN CP sample_scripts/my_openssl.cnf /etc/ssl/my_openssl.cnf
+RUN echo 'export OPENSSL_CONF=/etc/ssl/my_openssl.cnf' >>  ~/.bashrc
 
 CMD "bash"
 
