@@ -9,8 +9,9 @@ dbset db mssqls
 dbset bm TPC-C
 
 diset connection mssqls_host localhost
-diset connection mssqls_authentication windows
+diset connection mssqls_authentication linux
 diset connection mssqls_odbc_driver "ODBC Driver 17 for SQL Server"
+diset connection mssqls_linux_odbc "/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.10.so.1.1"
 
 diset tpcc mssqls_count_ware 1
 diset tpcc mssqls_num_vu 1
